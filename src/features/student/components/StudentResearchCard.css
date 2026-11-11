@@ -1,0 +1,105 @@
+/* Same card as the public site (components/researchCard/ResearchCard.css) plus the Rate · Comment · Save row. */
+.sd-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--sd-border);
+  border-radius: var(--sd-radius-card);
+  box-shadow: 0 8px 22px #1c375b0d;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.sd-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sd-shadow-lift);
+  border-color: #a9b9cf;
+}
+
+.sd-card-photo {
+  height: 170px;
+  overflow: hidden;
+  background: #dce7f5;
+}
+
+.sd-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.sd-card:hover .sd-card-photo img {
+  transform: scale(1.05);
+}
+
+.sd-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 20px 14px;
+}
+
+.sd-card-tag {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e6edf7;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--sd-blue);
+}
+
+.sd-card h3 {
+  margin: 12px 0 8px;
+  font: 600 clamp(18px, 2vw, 21px) / 1.2 Georgia, serif;
+}
+
+.sd-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #4b5b73;
+}
+
+.sd-card-meta {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sd-slate);
+}
+
+.sd-card-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 12px 2px;
+  border-top: 1px solid #e3eaf3;
+  color: var(--sd-pink);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: padding var(--ease);
+}
+
+.sd-card-detail:hover {
+  padding-inline: 6px;
+}
+
+.sd-card-actions {
+  position: relative; /* the rating popover opens upwards, over the card */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  padding-top: 6px;
+  border-top: 1px solid #e3eaf3;
+}

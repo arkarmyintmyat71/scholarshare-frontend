@@ -1,0 +1,94 @@
+/* Public research card. The student card (features/student/components/StudentResearchCard.css) looks the same. */
+.research-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 8px 22px #1c375b0d;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+  border-color: #a9b9cf;
+}
+
+.card-top {
+  height: 170px;
+  overflow: hidden;
+  background: #dce7f5;
+}
+
+.photo-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.research-card:hover .photo-top img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 20px 20px;
+}
+
+.card-body > span {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e6edf7;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--blue);
+}
+
+.card-body h3 {
+  margin: 12px 0 8px;
+  font: 600 clamp(18px, 2vw, 21px) / 1.2 Georgia, serif;
+  color: var(--ink);
+}
+
+.card-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #4b5b73;
+}
+
+.card-body footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.card-body footer b {
+  transition: transform var(--ease);
+}
+
+.research-card:hover .card-body footer b {
+  transform: translateX(4px);
+}
+
+.research-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
